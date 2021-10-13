@@ -26,7 +26,7 @@ async def repo(event):
 async def alive(event):
     chat = await event.get_chat()
     await event.delete()
-    uptime = await get_readable_time((time.time() - StartTime))
+    uptime = get_readable_time((time.time() - StartTime))
     x = "**𝙳𝙰𝚂𝙷𝙰 𝙸𝚂 𝙰𝙻𝙸𝚅𝙴**\n\n"
     x += "**Yes Master, Am Alive And Systems Are Working Perfectly As It Should Be...**\n\n"
     x += "✘ About My System ✘\n\n"
