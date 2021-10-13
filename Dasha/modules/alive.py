@@ -2,7 +2,7 @@ from Dasha.events import dasha
 from Dasha import StartTime
 import time, datetime
 from . import get_readable_time
-from telethon import Button
+from telethon import Button, version
 
 @dasha(pattern="^/ping")
 async def _(event):
@@ -24,6 +24,7 @@ async def repo(event):
 
 @dasha(pattern="^/alive$")
 async def alive(event):
+try:
     chat = await event.get_chat()
     await event.delete()
     uptime = get_readable_time((time.time() - StartTime))
@@ -35,4 +36,5 @@ async def alive(event):
     x += f"➾ **ᴜᴘᴛɪᴍᴇ** ☞ {uptime}\n\n"
     x += f"➾ **ᴍʏ ᴍᴀsᴛᴇʀ** ☞ [Iɴᴅʀᴀᴊɪᴛʜ • 🇮🇳 • #AɪɴCʀᴀᴅ](tg://user?id=1633375527)\n"
     lol = await event.client.send_file(event.chat_id, file='Dasha/resources/Dasha.jpg', caption=x)
-
+except Exception as v:
+   await event.respond(str(v))
