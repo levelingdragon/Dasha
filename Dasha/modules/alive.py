@@ -24,6 +24,15 @@ async def repo(event):
 
 @dasha(pattern="^/alive$")
 async def alive(event):
- first_name = event.sender.first_name
- last_name = event.sender.last_name
- user_id = event.sender_id
+    chat = await event.get_chat()
+    await event.delete()
+    uptime = await get_readable_time((time.time() - StartTime))
+    x = "**𝙳𝙰𝚂𝙷𝙰 𝙸𝚂 𝙰𝙻𝙸𝚅𝙴**\n\n"
+    x += "**Yes Master, Am Alive And Systems Are Working Perfectly As It Should Be...**\n\n"
+    x += "✘ About My System ✘\n\n"
+    x += f"➾ **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ** ☞ {version.__version__}\n"
+
+    x += f"➾ **ᴜᴘᴛɪᴍᴇ** ☞ {uptime}\n\n"
+    x += f"➾ **ᴍʏ ᴍᴀsᴛᴇʀ** ☞ [Iɴᴅʀᴀᴊɪᴛʜ • 🇮🇳 • #AɪɴCʀᴀᴅ](tg://user?id=1633375527)\n"
+    lol = await event.client.send_file(event.chat_id, file='Dasha/resources/Dasha.jpg', caption=x)
+
