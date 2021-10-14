@@ -14,7 +14,7 @@ async def _(event):
     uptime = get_readable_time((time.time() - StartTime))
     await message.edit(
         "<b>『 ☛ Pᴏɴɢ</b> <code>{}</code>\n"
-        "<b>☛ Uᴘᴛɪᴍᴇ</b> <code>{}</code>』".format(telegram_ping, uptime),
+        "<b>   ☛ Uᴘᴛɪᴍᴇ</b> <code>{}</code>』".format(telegram_ping, uptime),
         parse_mode="html",
     )
        
