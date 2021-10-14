@@ -29,12 +29,14 @@ async def alive(event):
     await event.delete()
     uptime = get_readable_time((time.time() - StartTime))
     x = "**𝙳𝙰𝚂𝙷𝙰 𝙸𝚂 𝙰𝙻𝙸𝚅𝙴**\n\n"
-    x += "**Yes Master, Am Alive And Systems Are Working Perfectly As It Should Be...**\n\n"
-    x += "✘ About My System ✘\n\n"
-    x += f"➾ **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ** ☞ {version.__version__}\n"
+    x += "**Sʏsᴛᴇᴍs ᴀʀᴇ ᴡᴏʀᴋɪɴɢ ᴘᴇʀғᴇᴄᴛʟʏ...**\n\n"
+    x += "**✘ 🄰🄱🄾🅄🅃 🄼🅈 🅂🅈🅂🅃🄴🄼🅂✘**\n\n"
+    x +=f'**===============================**\n\n'
+    x += f"➾ **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ** ☞ {version.__version__}\n\n"
 
     x += f"➾ **ᴜᴘᴛɪᴍᴇ** ☞ {uptime}\n\n"
-    x += f"➾ **ᴍʏ ᴍᴀsᴛᴇʀ** ☞ [Iɴᴅʀᴀᴊɪᴛʜ • 🇮🇳 • #AɪɴCʀᴀᴅ](tg://user?id=1633375527)\n"
+    x +=f'**===============================**\n\n'
+    x += f"➾ **ᴍʏ ᴍᴀsᴛᴇʀ** ☞ [Iɴᴅʀᴀᴊɪᴛʜ](tg://user?id=1633375527)\n"
     lol = await event.client.send_file(event.chat_id, file='Dasha/resources/Dashaop.jpg', caption=x)
  except Exception as v:
    await event.respond(str(v))
