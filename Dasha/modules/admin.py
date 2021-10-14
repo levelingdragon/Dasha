@@ -25,6 +25,6 @@ async def pin(event):
      fuck = await event.edit('`Processing...`')
      lol = await event.get_reply_message()
      await event.client.pin_message(event.chat_id, lol, notify=True)
-     await fuck.edit(lol, f'**Sᴜᴄᴄᴇssғᴜʟʟʏ Pɪɴɴᴇᴅ [Tʜɪs](http://t.me/c/{lol.chat.id}/{lol.id}) ᴍᴇssᴀɢᴇ**')
+     await fuck.edit(f'**Sᴜᴄᴄᴇssғᴜʟʟʏ Pɪɴɴᴇᴅ [Tʜɪs](http://t.me/c/{lol.chat.id}/{lol.id}) ᴍᴇssᴀɢᴇ**')
  
   
