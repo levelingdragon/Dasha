@@ -34,9 +34,9 @@ async def alive(event):
     x +=f'**=============================**\n'
     x += f"➾ **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ** ☞ {version.__version__}\n"
 
-    x += f"➾ **ᴜᴘᴛɪᴍᴇ** ☞ {uptime}\n\n"
+    x += f"➾ **ᴜᴘᴛɪᴍᴇ** ☞ {uptime}\n"
     x +=f'**=============================**\n'
-    x += f"➾ **ᴍʏ ᴍᴀsᴛᴇʀ** ☞ [Iɴᴅʀᴀᴊɪᴛʜ](tg://user?id=1633375527)\n"
+    x += f"➾ **ᴍʏ ᴍᴀsᴛᴇʀ** ☞ [Iɴᴅʀᴀᴊɪᴛʜ](tg://user?id=1633375527)\n\n"
     lol = await event.client.send_file(event.chat_id, file='Dasha/resources/Dashaop.jpg', caption=x)
  except Exception as v:
    await event.respond(str(v))
