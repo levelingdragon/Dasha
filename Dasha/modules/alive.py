@@ -35,6 +35,6 @@ async def alive(event):
 
     x += f"➾ **ᴜᴘᴛɪᴍᴇ** ☞ {uptime}\n\n"
     x += f"➾ **ᴍʏ ᴍᴀsᴛᴇʀ** ☞ [Iɴᴅʀᴀᴊɪᴛʜ • 🇮🇳 • #AɪɴCʀᴀᴅ](tg://user?id=1633375527)\n"
-    lol = await event.client.send_file(event.chat_id, file='Dasha/resources/Dasha.jpg', caption=x)
+    lol = await event.client.send_file(event.chat_id, file='Dasha/resources/Dashaop.jpg', caption=x)
  except Exception as v:
    await event.respond(str(v))
