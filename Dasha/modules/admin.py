@@ -24,4 +24,5 @@ async def kick(event):
 async def pin(event):
     lol = await event.get_reply_message()
     await event.client.pin_message(event.chat_id, lol, notify=True)
-    await event.reply(f'**Sᴜᴄᴄᴇssғᴜʟʟʏ Pɪɴɴᴇᴅ [Tʜɪs](http://t.me/c/{x.chat.id}/{x.id}) ᴍᴇssᴀɢᴇ**')
+    await event.edit(f'**Sᴜᴄᴄᴇssғᴜʟʟʏ Pɪɴɴᴇᴅ [Tʜɪs](http://t.me/c/{x.chat.id}/{x.id}) ᴍᴇssᴀɢᴇ**')
+  
