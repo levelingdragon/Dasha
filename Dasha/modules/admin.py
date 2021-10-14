@@ -16,6 +16,12 @@ async def kick(event):
    return await event.edit("Failed to Kick, No CanBanUsers Right.")
  try:
   await ubot.kick_participant(event.chat_id, user.id)
-  await event.edit(f"Kicked **{user.first_name}** from {event.chat.title}!")
+  await event.edit(f"Kicked **[{user.first_name}](tg://user?id={user.id})** from [{event.chat.title}](http://t.me/{event.chat.username})!")
  except:
   await event.edit("Can't kick admins.")
+
+@dasha(pattern="^/pin$")
+async def pin(event):
+    lol = await event.get_reply_message()
+    await event.client.pin_message(event.chat_id, lol, notify=True)
+    await event.reply(f'**Sᴜᴄᴄᴇssғᴜʟʟʏ Pɪɴɴᴇᴅ [Tʜɪs](http://t.me/c/{x.chat.id}/{x.id}) ᴍᴇssᴀɢᴇ**')
