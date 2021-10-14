@@ -13,8 +13,8 @@ async def _(event):
     telegram_ping = str(round(pingtime.total_seconds(), 2)) + "s"
     uptime = get_readable_time((time.time() - StartTime))
     await message.edit(
-        "<b>Pong !! </b> <code>{}</code>\n"
-        "<b>Uptime -</b> <code>{}</code>".format(telegram_ping, uptime),
+        "<b>『 ☛ Pᴏɴɢ</b> <code>{}</code>\n"
+        "<b>☛ Uᴘᴛɪᴍᴇ</b> <code>{}</code>』".format(telegram_ping, uptime),
         parse_mode="html",
     )
        
@@ -28,7 +28,7 @@ async def alive(event):
     chat = await event.get_chat()
     await event.delete()
     uptime = get_readable_time((time.time() - StartTime))
-    x = "**𝙳𝙰𝚂𝙷𝙰 𝙸𝚂 𝙰𝙻𝙸𝚅𝙴**\n\n"
+    x = "**       〘 𝙳𝙰𝚂𝙷𝙰 𝙸𝚂 𝙰𝙻𝙸𝚅𝙴〙 **\n\n"
     x += "**Sʏsᴛᴇᴍs ᴀʀᴇ ᴡᴏʀᴋɪɴɢ ᴘᴇʀғᴇᴄᴛʟʏ...**\n\n"
     x += "**✘** 🄰🄱🄾🅄🅃 🄼🅈 🅂🅈🅂🅃🄴🄼🅂 **✘**\n\n"
     x +=f'**=============================**\n'
