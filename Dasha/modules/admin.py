@@ -27,8 +27,8 @@ async def pin(event):
      await event.client.pin_message(event.chat_id, lol, notify=True)
      await fuck.edit(f'**Sᴜᴄᴄᴇssғᴜʟʟʏ Pɪɴɴᴇᴅ [Tʜɪs](http://t.me/c/{lol.chat.id}/{lol.id}) ᴍᴇssᴀɢᴇ**')
   
-  @dasha(pattern='^/kickme')
-  async def lmao(event):
+@dasha(pattern='^/kickme')
+async def lmao(event):
         await event.edit(*`My Master left This Chat.`" )
         await event.client.kick_participant(event.chat_id, 'me')
       
