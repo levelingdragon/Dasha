@@ -24,10 +24,6 @@ async def kick(event):
 async def pin(event):
      fuck = await event.edit('`Processing...`')
      lol = await event.get_reply_message()
-  if lol:
      await event.client.pin_message(event.chat_id, lol, notify=True)
      await fuck.edit(f'**Sᴜᴄᴄᴇssғᴜʟʟʏ Pɪɴɴᴇᴅ [Tʜɪs](http://t.me/c/{lol.chat.id}/{lol.id}) ᴍᴇssᴀɢᴇ**')
-  else:
-     await fuck.edit('Please reply to a message')
-
   
