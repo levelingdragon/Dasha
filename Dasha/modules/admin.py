@@ -29,6 +29,6 @@ async def pin(event):
   
 @dasha(pattern='^/kickme')
 async def lmao(event):
-        await event.edit('`My Master left This Chat.`" )
+        await event.edit('`My Master left This Chat.`')
         await event.client.kick_participant(event.chat_id, 'me')
       
