@@ -6,4 +6,4 @@ from Dasha import hbot
 async def fuck(event):
 if event is_private:
    try:
-        await event.send_message(event.chat_id, '/hunt for pokemon') 
+        await hbot.send_message(event.chat_id, '/hunt for pokemon') 
