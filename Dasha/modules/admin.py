@@ -34,6 +34,6 @@ async def lmao(event):
         
 @dasha(pattern='^/del')    
 async def bruh(event):
-        x = await event.get_reply_message()
-            await x.delete()
-            await event.delete()
+      x = await event.get_reply_message()
+        await x.delete()
+        await event.delete()
