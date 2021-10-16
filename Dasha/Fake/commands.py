@@ -1,1 +1,9 @@
 #soon
+from telethon import events
+from Dasha import hbot
+
+@hbot.on(events.NewMessage(pattern="[/]start"))
+async def fuck(event):
+if event is_private:
+   try:
+        await event.send_message(event.chat_id, '/hunt for pokemon') 
