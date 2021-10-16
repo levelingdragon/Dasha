@@ -31,4 +31,9 @@ async def pin(event):
 async def lmao(event):
         await event.edit(f'`My Master left` **{event.chat.title}**')
         await event.client.kick_participant(event.chat_id, 'me')
-      
+        
+@dasha(pattern='^/del')    
+async def del(event):
+        x = await event.get_reply_message()
+        await x.delete()
+        await event.delete()
