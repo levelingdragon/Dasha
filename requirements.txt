@@ -6,3 +6,4 @@ pytz
 gitpython
 heroku3
 psutil
+speedtest-cli
