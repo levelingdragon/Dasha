@@ -20,5 +20,5 @@ async def test(event):
 async def lmao(event):
       x=await event.get_reply_message()
       sex=await event.edit('`Downloading...`')
-      await event.client.download_media(x,f'{x.id}.mp4')
+      await event.client.download_media(x,f'{event.id}.mp4')
       await sex.edit('`Media Successfully dowmloaded.`')
