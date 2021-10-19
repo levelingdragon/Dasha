@@ -16,3 +16,8 @@ async def test(event):
       await lol.delete()
       await event.reply(file=x)
       
+@dasha(pattern="^/vdl$")
+async def lmao(event):
+      x=await event.get_reply_message()
+      await event.client.download_media(x,f'{x.id}.mp4')
+      
