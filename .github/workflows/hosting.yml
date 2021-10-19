@@ -45,5 +45,5 @@ jobs:
          run: |
            curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -
            pwd
-           cd Dasha
-           python3 -m bot
+           cd bot
+           python3 -m Dasha
