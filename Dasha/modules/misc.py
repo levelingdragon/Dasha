@@ -8,7 +8,7 @@ async def stat(event):
 
 @dasha(pattern='^/test$')
 async def test(event):
-      lol=await event.edit(`Processing....`)
+      lol=await event.edit('`Processing....`')
       s = speedtest.Speedtest()
       s.download()
       s.upload()
