@@ -37,7 +37,7 @@ jobs:
        - name: cloning repo and install
          continue-on-error: true
          run: |
-           git clone https://github.com/Tamilvip007/Dasha Dasha && cd Dasha && pip3 install -r requirements.txt
+           git clone https://github.com/Tamilvip007/Dasha.git bot && cd bot && pip3 install -r requirements.txt
            pwd
        - name: Running
          timeout-minutes: 350
@@ -45,5 +45,5 @@ jobs:
          run: |
            curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -
            pwd
-           cd Dasha
+           cd bot
            python3 -m Dasha
