@@ -4,6 +4,9 @@ name : Dasha
 on:
     schedule:
       - cron: "0 */6 * * *"
+    push:
+      branches: [ master ]
+
       
 env:
   API_KEY: ${{secrets.API_KEY}}
