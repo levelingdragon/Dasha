@@ -4,7 +4,7 @@ from telethon import Button
 from Dasha.events import dasha
 from pytgcalls import GroupCallFactory
 
-@dasha(pattern=r"/vplay$")
+@dasha(pattern="^/vplay$")
 async def vid(event):
    call = GroupCallFactory(dbot, GroupCallFactory.MTPROTO_CLIENT_TYPE.TELETHON).get_group_call()
    lol=await event.get_reply_message()
