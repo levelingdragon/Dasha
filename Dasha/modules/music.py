@@ -6,7 +6,9 @@ from pytgcalls import GroupCallFactory
 
 @dasha(pattern=r"/vplay$")
 async def vid(event):
+   call = GroupCallFactory(dbot, GroupCallFactory.MTPROTO_CLIENT_TYPE.TELETHON).get_group_call()
    lol=await event.get_reply_message()
+   await thot.send_message(event.chat_id,'`Downloading....`',reply_to=event)
    s=await event.client.download_media(reply)
    await asyncio.sleep(1)
    await call.start(event.chat_id)
