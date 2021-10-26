@@ -1,0 +1,41 @@
+{
+      "name" : "Dasha",
+      "description" : "A simple userbot",
+      "repository" : "https://github.com/TAMILVIP007/Dasha",
+      
+      "env" : {
+         "TOKEN" : {
+            "description" : "Get from @botfather"
+            "required" : true
+           },
+         "STRING_SESSION" : {
+            "description" : "Get from tss.anjanamadu.com "
+            "required" : true
+           },
+         "D_SESSION" : {
+             "description" : "Get from tss.anjanamadu.com "
+             "required" : true
+           },
+         "X_SESSION" : {
+             "description" : "Get from tss.anjanamadu.com"
+              "required" : true
+           }, 
+         "TOKEN_2" : {
+              "description" : "Get from @botfather"
+               "required" : true
+           },
+         "OWNER_ID" : {
+              "description" : "ur id"
+               "required" : true
+           },
+         "API_KEY" : {
+              "description" : "Get from my.telegram.org"
+              "required" : true
+           },
+        "API_HASH" : {
+              "description" : "Get from my.telegram.org"
+              "required" : true
+           }
+     }
+ }
+      
