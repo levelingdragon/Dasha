@@ -51,7 +51,7 @@ async def ban(event):
  if not event.chat.admin_rights.ban_users:
    return await event.edit("Dont have enough ryts")
  try:
-  await ubot.edit_permission(event.chat_id, user.id, view_messages=False)
+  await ubot.edit_permissions(event.chat_id, user.id, view_messages=False)
   await event.edit(f"Banned **[{user.first_name}](tg://user?id={user.id})** from [{event.chat.title}](http://t.me/{event.chat.username})!")
  except:
   await event.edit("Can't ban admins.")
@@ -71,8 +71,8 @@ async def dban(event):
    return await event.edit("Failed to Kick, No CanBanUsers Right.")
  try:
   lol=await event.get_reply_message()
-  await ubot.edit_permission(event.chat_id, lol.sender.id, view_messages=False)
+  await ubot.edit_permissions(event.chat_id, lol.sender.id, view_messages=False)
   await lol.delete()
-  await event.edit(f"Kicked **[{user.first_name}](tg://user?id={user.id})** from [{event.chat.title}](http://t.me/{event.chat.username})!")
+  await event.edit(f"banned **[{user.first_name}](tg://user?id={user.id})** from [{event.chat.title}](http://t.me/{event.chat.username})!")
  except:
   await event.edit("Can't kick admins.")
