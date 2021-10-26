@@ -12,9 +12,7 @@ async def vid(event):
    s=await xbot.download_media(reply)
    await call.start(event.chat_id)
    await call.start_video(s)
-   await x.delete()
-   await tbot.send_message(event.chat_id, '`Playing.....`', file='https://telegra.ph//file/82c68cdadd6b06ca2b8be.jpg', buttons=[Button.url('Source',f'http://t.me/c/{(lol.chat.id)}/{(lol.id)}'), Button.url('Support', 't.me/Dashasupport')],reply_to=event)
-
+   await 
   
 @dasha(pattern="^/aplay$")
 async def audio(event):
