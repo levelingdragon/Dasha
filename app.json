@@ -5,7 +5,6 @@
       "logo" : "https://telegra.ph//file/7eb582eca88f924bd6eb8.jpg",
       "keywords" : ["python3", "telethon", "userbot"],
       "repository": "https://github.com/Tamilvip007/dasha",
-      "stack": "container",
       "env" : {
          "TOKEN" : {
             "description" : "Get from @botfather",
