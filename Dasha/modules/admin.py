@@ -37,3 +37,42 @@ async def bruh(event):
         x = await event.get_reply_message()
         await x.delete()
         await event.delete()
+        
+@dasha(pattern="^/ban$")
+async def ban(event):
+ if event.is_private:
+   return await event.edit("Please use this in groups.")
+ try:
+  user, extra = await get_user(event)
+ except TypeError:
+  pass
+ if not user:
+  await event.edit("Failed to fetch user.")
+ if not event.chat.admin_rights.ban_users:
+   return await event.edit("Dont have enough ryts")
+ try:
+  await ubot.edit_permission(event.chat_id, user.id, view_messages=False)
+  await event.edit(f"Banned **[{user.first_name}](tg://user?id={user.id})** from [{event.chat.title}](http://t.me/{event.chat.username})!")
+ except:
+  await event.edit("Can't ban admins.")
+  
+  
+@dasha(pattern="^/dban$")
+async def dban(event):
+ if event.is_private:
+   return await event.edit("Please use this in groups.")
+ try:
+  user, extra = await get_user(event)
+ except TypeError:
+  pass
+ if not user:
+  await event.edit("Failed to fetch user.")
+ if not event.chat.admin_rights.ban_users:
+   return await event.edit("Failed to Kick, No CanBanUsers Right.")
+ try:
+  lol=await event.get_reply_message()
+  await ubot.edit_permission(event.chat_id, lol.sender.id, view_messages=False)
+  await lol.delete()
+  await event.edit(f"Kicked **[{user.first_name}](tg://user?id={user.id})** from [{event.chat.title}](http://t.me/{event.chat.username})!")
+ except:
+  await event.edit("Can't kick admins.")
