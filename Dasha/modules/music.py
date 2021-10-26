@@ -12,7 +12,6 @@ async def vid(event):
    s=await xbot.download_media(reply)
    await call.start(event.chat_id)
    await call.start_video(s)
-   await 
   
 @dasha(pattern="^/aplay$")
 async def audio(event):
