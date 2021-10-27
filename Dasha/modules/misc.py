@@ -1,6 +1,7 @@
 from Dasha.events import dasha
 import speedtest
 import nekos
+import requests
 #Some misc modules
 
 @dasha(pattern='^/stat')
@@ -97,3 +98,23 @@ async def nekos_img(event):
     await ubot.send_file(event.chat_id,pic)
     await anos.delete()     
  
+ 
+      
+@dasha(pattern="^/meme")
+async def lol(event):
+    r = requests.get('https://nksamamemeapi.pythonanywhere.com').json()
+    pic = r['image']
+    title = r['title']
+    await event.delete()
+    await event.client.send_file(event.chat_id, pic , caption=title)
+
+      
+@dasha(pattern="^/hmeme")
+async def lol(event):
+    r = requests.get('https://nksamamemeapi.pythonanywhere.com/get/hentaimemes').json()
+    pic = r['image']
+    title = r['title']
+    await event.delete()
+    await event.client.send_file(event.chat_id, pic , caption=title)
+    
+   
