@@ -9,7 +9,7 @@ async def vid(event):
    call = GroupCallFactory(xbot, GroupCallFactory.MTPROTO_CLIENT_TYPE.TELETHON).get_group_call()
    lol=await event.get_reply_message()
    x=await tbot.send_message(event.chat_id,'`Downloading....`',reply_to=event)
-   s=await xbot.download_media(reply)
+   s=await xbot.download_media(lol)
    await call.start(event.chat_id)
    await call.start_video(s)
   
@@ -18,7 +18,7 @@ async def audio(event):
    call = GroupCallFactory(xbot, GroupCallFactory.MTPROTO_CLIENT_TYPE.TELETHON).get_group_call()
    lol=await event.get_reply_message()
    x=await tbot.send_message(event.chat_id,'`Downloading....`',reply_to=event)
-   ok=await xbot.download_media(reply)
+   ok=await xbot.download_media(lol)
    await call.start(event.chat_id)
    await call.start_audio(ok)
    await x.delete()
