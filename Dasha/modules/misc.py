@@ -92,7 +92,7 @@ async def nekos_img(event):
     "smug",
     ]
     args = event.pattern_match.group(1)
-    anos = await event.edit("Fetching from nekos...")
+    anos = await event.edit("`Fetching from nekos...`")
     pic = nekos.img(args)
     await ubot.send_file(event.chat_id,pic)
     await anos.delete()     
