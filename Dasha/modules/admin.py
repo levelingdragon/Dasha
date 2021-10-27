@@ -38,7 +38,7 @@ async def bruh(event):
         await x.delete()
         await event.delete()
         
-@dasha(pattern="^/ban$")
+@dasha(pattern="^/ban  ?(.*)")
 async def ban(event):
  if event.is_private:
    return await event.edit("Please use this in groups.")
@@ -57,7 +57,7 @@ async def ban(event):
   await event.edit("Can't ban admins.")
   
   
-@dasha(pattern="^/dban$")
+@dasha(pattern="^/dban ?(.*)")
 async def dban(event):
  if event.is_private:
    return await event.edit("Please use this in groups.")
@@ -75,4 +75,4 @@ async def dban(event):
   await lol.delete()
   await event.edit(f"banned **[{user.first_name}](tg://user?id={user.id})** from [{event.chat.title}](http://t.me/{event.chat.username})!")
  except:
-  await event.edit("Can't kick admins.")
+  await event.edit("Can't ban admins.")
