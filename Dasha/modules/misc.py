@@ -23,7 +23,10 @@ async def lmao(event):
       sex=await event.edit('`Downloading...`')
       await event.client.download_media(x,f'{event.id}.mp4')
       await sex.edit('`Media Successfully dowmloaded.`')
-arguments = [
+
+@dasha(pattern="^/nekos ?(.*)")
+async def nekos_img(event):
+    arguments = [
     "feet",
     "yuri",
     "trap",
@@ -87,12 +90,10 @@ arguments = [
     "woof",
     "kemonomimi",
     "smug",
-]
-@dasha(pattern="^/nekos ?(.*)")
-async def nekos_img(event):
+    ]
     args = event.pattern_match.group(1)
-    anos = await event.reply("Fetching from nekos...")
+    anos = await event.edit("Fetching from nekos...")
     pic = nekos.img(args)
-    await event.client.send_file(event.chat_id,pic)
+    await ubot.send_file(event.chat_id,pic)
     await anos.delete()     
  
