@@ -2,6 +2,8 @@ from Dasha.events import dasha
 import speedtest
 import nekos
 import requests
+from telethon.sync import events
+from Dasha import ubot
 #Some misc modules
 
 @dasha(pattern='^/stat')
@@ -117,4 +119,8 @@ async def lol(event):
     await event.delete()
     await event.client.send_file(event.chat_id, pic , caption=title)
     
-   
+@ubot.on(events.NewMessage(incoming=True))
+async def kek(e):
+    for y in ['in_progress','completed','requested','queued']:
+         if y in e.text and e.sender.id == 2080460107 and e.chat.id == 1544622735:
+           await e.delete()
