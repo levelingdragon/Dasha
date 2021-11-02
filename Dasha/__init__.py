@@ -5,8 +5,11 @@ import os, logging
 from logging import basicConfig, getLogger, INFO
 """Dasha"""
 logging.basicConfig(
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
-)
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    handlers=[logging.FileHandler("log.txt"), logging.StreamHandler()],
+    level=logging.INFO,
+ )
+logging.basicConfig( format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.DEBUG)
 LOGGER = logging.getLogger(__name__)
 
 StartTime = time.time()
