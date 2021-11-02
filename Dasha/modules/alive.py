@@ -17,11 +17,11 @@ async def _(event):
         "<b>     ☛ Uᴘᴛɪᴍᴇ :</b> <code>{}</code>』".format(telegram_ping, uptime),
         parse_mode="html",
     )
-       
+'''      
 @dasha(pattern="^/repo$")
 async def repo(event):
-      await event.client.send_file(event.chat_id, file='BAADBQADYQMAAlwFAVREFVX4G0IjFAI', caption='click - **[Rᴇᴘᴏ](http://github.com/tamilvip007/dasha)**')
-
+      await event.client.send_file(event.chat_id, file='Dasha/resources/Dasha.jpg', caption='click - **[Rᴇᴘᴏ](http://github.com/tamilvip007/dasha)**')
+'''
 @dasha(pattern="^/alive$")
 async def alive(event):
  try:
@@ -37,6 +37,6 @@ async def alive(event):
     x += f"➾ **ᴜᴘᴛɪᴍᴇ** ☞ `{uptime}`\n"
     x +=f'**=============================**\n\n'
     x += f"➾ **ᴍʏ ᴍᴀsᴛᴇʀ** ☞ **『 [Iɴᴅʀᴀᴊɪᴛʜ](tg://user?id=1633375527) 』** \n\n"
-    lol = await event.client.send_file(event.chat_id, file='Dasha/resources/Dashaop.jpg', caption=x)
+    lol = await event.client.send_file(event.chat_id, file='Dasha/resources/lol.mp4', caption=x)
  except Exception as v:
    await event.respond(str(v))
