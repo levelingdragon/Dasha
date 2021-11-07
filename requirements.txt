@@ -1,4 +1,4 @@
-telethon
+git+https://github.com/New-dev0/Telethon/archive/Vector.zip
 pytgcalls==3.0.0.dev19
 sqlalchemy==1.3.23
 psycopg2-binary
