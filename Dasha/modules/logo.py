@@ -29,7 +29,7 @@ async def lego(event):
  pesan = await event.reply('Logo In A Process. Please Wait...')
  try:
     text = event.pattern_match.group(1)
-    ok = await event.get_reply_message
+    ok = event.get_reply_message
     randc = await tbot.download_media(ok)
     img = Image.open(io.BytesIO(requests.get(randc).content))
     draw = ImageDraw.Draw(img)
