@@ -11,7 +11,7 @@ from io import BytesIO
 from requests import get
 from telethon.tl.types import InputMessagesFilterPhotos
 from telethon.sync import events
-from .. import OWNER_ID, dbot
+from .. import OWNER_ID, tbot
 from PIL import Image, ImageDraw, ImageFont
 
 
@@ -30,7 +30,7 @@ async def lego(event):
  try:
     text = event.pattern_match.group(1)
     ok = await event.get_reply_message
-    randc = await dbot.download_media(ok)
+    randc = await tbot.download_media(ok)
     img = Image.open(io.BytesIO(requests.get(randc).content))
     draw = ImageDraw.Draw(img)
     image_widthz, image_heightz = img.size
