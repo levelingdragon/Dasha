@@ -31,7 +31,7 @@ async def lego(event):
     text = event.pattern_match.group(1)
     ok = event.get_reply_message
     randc = await tbot.download_media(ok)
-    img = Image.open(io.BytesIO(requests.get(randc).content))
+    img = Image.open(io.BytesIO(randc))
     draw = ImageDraw.Draw(img)
     image_widthz, image_heightz = img.size
     pointsize = 500
