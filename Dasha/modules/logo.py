@@ -17,7 +17,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 
 @tbot.on(events.NewMessage(pattern="^/blogo ?(.*)"))
-async def lego(evitent):
+async def lego(event):
  quew = event.pattern_match.group(1)
  if event.sender_id == OWNER_ID:
      pass
