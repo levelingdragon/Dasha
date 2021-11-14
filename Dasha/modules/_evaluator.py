@@ -70,18 +70,21 @@ async def ubot(event):
     else:
         
         await event.reply(final_output)
+        
+        
 
-async def aexec(code, smessatatus):
-    message = event = smessatatus
-
-    def p(_x):
-        return print(slitu.yaml_format(_x))
-
-    reply = await event.get_reply_message()
+async def aexec(code, event):
     exec(
-        "async def __aexec(message, reply, client, p): "
-        + "\n event = smessatatus = message"
+        (
+            (
+                ("async def __aexec(e, client): " + "\n message = event = e")
+                + "\n reply = await event.get_reply_message()"
+            )
+            + "\n chat = (await event.get_chat()).id"
+        )
         + "".join(f"\n {l}" for l in code.split("\n"))
     )
-    return await locals()["__aexec"](message, reply, ubot, p)
+
+    return await locals()["__aexec"](event, event.client
+
 
