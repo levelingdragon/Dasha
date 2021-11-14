@@ -2,6 +2,7 @@ from Dasha.events import dasha
 from Dasha import ubot, tbot
 import subprocess, asyncio, traceback, io, sys, os, time
 import requests
+import asyncio
 
 @dasha(pattern="^/exec ?(.*)")
 async def ebent(event):
@@ -68,7 +69,8 @@ async def ubot(event):
                 caption=cmd,
             )
     else:
-        
+        await asyncio.sleep(1)
+
         await event.reply(final_output)
         
         
