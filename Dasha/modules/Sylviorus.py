@@ -2,7 +2,7 @@ from typing import Optional, Dict, Union
 from motor import motor_asyncio
 from datetime import datetime
 from Dasha import URL
-from Dasha.events impprt dasha
+from Dasha.events import dasha
 MONGO = motor_asyncio.AsyncIOMotorClient(URL)
 db = MONGO["Sylviorus"]["Main"]
 async def update_gban(
