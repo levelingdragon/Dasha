@@ -1,6 +1,6 @@
 from Dasha.events import dasha
 from Dasha.modules.Sylviorus import update_gban as k
-@dasha(pattern="[*?]bl ?(.*)")
+@dasha(pattern="[+]gban ?(.*)")
 async def _(e):
  if e.is_reply:
    i=await e.reply('`Gbanning`')
