@@ -1,5 +1,5 @@
 from Dasha.events import dasha
-from Dasha.Sylviorus import update_gban as k
+from Dasha.modules.Sylviorus import update_gban as k
 @dasha(pattern="[*?]bl ?(.*)")
 async def _(e):
  if e.is_reply:
