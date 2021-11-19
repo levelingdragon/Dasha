@@ -6,10 +6,23 @@ from Dasha.events import dasha
 MONGO = motor_asyncio.AsyncIOMotorClient(URL)
 db = MONGO["Sylviorus"]["Main"]
 
-
 async def get_gban(user: int) -> Optional[Dict[str, Union[str, int]]]:
     json = await db.find_one({"user": user})
     return json
+
+
+async def get_gban_by_proofid(proofid: int) -> Optional[Dict[str, Union[str, int]]]:
+    json = await db.find_one({"proof_id": proofid})
+    return json
+
+
+async def delete_gban(user: int) -> bool:
+    gban = await get_gban(user)
+    if gban:
+        await db.delete_one(gban)
+        return True
+    return False
+
 
 async def update_gban(
     victim: int,
@@ -42,10 +55,9 @@ async def update_gban(
         await db.insert_one(gbans_dict)
     return True
 
-@dasha(pattern="sylban$")
-async def ok(e):
-  i=await e.edit('banning...')
-  y = await e.get_reply_message()
-  reason = 'test'
-  await update_gban(victim=(y.sender.id), reason=reason, message=y, enforcer= e.sender.id)
-  await i.edit('banned successfully')
+async def get_all_gbans():
+ p = db.find()
+ users = []
+ for x in p:
+    users.append(x.get('victim'))
+ return users
