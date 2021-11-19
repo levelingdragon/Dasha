@@ -9,3 +9,6 @@ psutil
 speedtest-cli
 nekos.py
 pillow
+dnspython
+motor
+pymongo[srv]
