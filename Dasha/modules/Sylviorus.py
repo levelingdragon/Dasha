@@ -5,6 +5,12 @@ from Dasha import URL
 from Dasha.events import dasha
 MONGO = motor_asyncio.AsyncIOMotorClient(URL)
 db = MONGO["Sylviorus"]["Main"]
+
+
+async def get_gban(user: int) -> Optional[Dict[str, Union[str, int]]]:
+    json = await db.find_one({"user": user})
+    return json
+
 async def update_gban(
     victim: int,
     reason: Optional[str] = None,
