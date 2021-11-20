@@ -8,7 +8,7 @@ async def _(e):
    sad = (e.pattern_match.group(1))
    send = (ok.sender.id)
    lol = (e.sender.id)
-   await k(victim=sender, reason=sed, message= ok.text, enforcer=lol)
+   await k(victim=send, reason=sed, message= ok.text, enforcer=lol)
    await i.edit('**Gbanned succesfully**')
  else:
    await e.respond('`Please reply to a message')
