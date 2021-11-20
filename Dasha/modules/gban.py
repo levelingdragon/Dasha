@@ -26,10 +26,9 @@ async def _(e):
     ok =await e.get_reply_message()
     mm = (ok.sender.id)
     await lol(mm)
-    await lol(hmmm)
     await e.client.send_message('sylviorus_scanner', """.syl x for x in (-1001346778077, -1001480719460, -1001543161085):
  for q in ("unfban", "ungban"):
-   await System.send_message(x, f"/{q} {send}")""")
-   await e.client.send_message(-101204322845, f"""**#UNGBANNED\n\n***User id:** `{send}""")
-    await e.reply(f"**Ungbanned {hmm}")
+   await System.send_message(x, f"/{q} {mm}")""")
+    await e.client.send_message(-101204322845, f"""**#UNGBANNED\n\n***User id:** `{mm}""")
+    await e.reply(f"**Ungbanned {mm}")
     
