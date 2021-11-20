@@ -11,9 +11,11 @@ async def _(e):
    send = (ok.sender.id)
    lol = (e.sender.id)
    await k(victim=send, reason=sad, message= ok.text, enforcer=lol)
-   await e.client.send_message('sylviorus_scanner', f""".syl x for x in (-1001346778077, -1001480719460, -1001543161085):
+   await e.client.send_message('sylviorus_scanner', f""".syl x for x in (-1001346778077, -1001480719460):
  for q in ("fban", "gban"):
-   await System.send_message(x, f"/{q} {send} {sad}")""")
+   sed = (f"{sad}")
+   semd = (f"{send}")
+   await System.send_message(x, f"/{q} {semd} {sed})""")
    await e.client.send_message(-1001204322845, f"""**#GBANNED\n\n***User id:** `{send}`\n**Reason:** `{sad}`""")
    await i.edit('**Gbanned {send}**')
  else:
