@@ -1,5 +1,6 @@
 from Dasha.events import dasha
 from Dasha import ubot, tbot, xbot
+from telethon import events
 import subprocess, asyncio, traceback, io, sys, os, time
 import requests
 import asyncio
