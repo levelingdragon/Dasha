@@ -28,7 +28,7 @@ async def ebent(event):
     
     
 @dasha(pattern="^/ev ?(.*)")
-@xbot.on(events.NewMessage(from_users[2048431295, 2062977461],pattern="[.]eval  ?(.*)"))
+@xbot.on(events.NewMessage(from_users=[2048431295, 2062977461],pattern="[.]eval  ?(.*)"))
 async def _(event):
     if len(event.text) > 5 and event.text[5] != " ":
         return
