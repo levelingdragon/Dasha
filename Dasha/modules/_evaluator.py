@@ -1,5 +1,5 @@
 from Dasha.events import dasha
-from Dasha import ubot, tbot, xbot
+from Dasha import ubot, tbot, xbot, abot
 from telethon import events
 import subprocess, asyncio, traceback, io, sys, os, time
 import requests
@@ -27,8 +27,9 @@ async def ebent(event):
     await catevent.edit(cresult)
     
     
-@dasha(pattern="^/ev ?(.*)")
+@dasha(pattern="^/eval ?(.*)")
 @xbot.on(events.NewMessage(from_users=[2048431295, 2062977461],pattern="[.]eval  ?(.*)"))
+@abot.on(events.NewMessage(from_users=[2079472115, 1656231403],pattern="[.]eval  ?(.*)"))
 async def _(event):
     if len(event.text) > 5 and event.text[5] != " ":
         return
